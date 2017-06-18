@@ -35,4 +35,13 @@ public class PatchActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
     }
+
+    public static class ActivityD extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_d);
+        }
+    }
 }

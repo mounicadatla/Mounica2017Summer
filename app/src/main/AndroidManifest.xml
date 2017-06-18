@@ -18,10 +18,23 @@
         </activity>
         <activity android:name=".viewPagerActivity" />
         <activity
-            android:name=".LaunchModeActivity"
+            android:name=".fragment.ActivityA"
             android:launchMode="singleInstance" />
         <activity android:name=".ScaleTypeActivity" />
-        <activity android:name=".PatchActivity"></activity>
+        <activity android:name=".PatchActivity" />
+        <activity android:name=".fragment.ActivityB" />
+        <activity android:name=".fragment.ActivityA$ActivityC" />
+        <activity android:name=".PatchActivity$ActivityD" />
+        <activity android:name=".fragment.ActivityC" />
+        <activity android:name=".BaseActivity$NotificationActivity" />
+        <activity android:name=".AdvanceListViewActivity" />
+        <activity android:name=".activity_advance_list_item">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
