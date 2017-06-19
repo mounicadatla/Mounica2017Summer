@@ -85,8 +85,8 @@ public class WorkFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_work, container, false);
         listView = (ListView) view.findViewById(R.id.fragment_work_lv);
-        ListNormalAdapter adapter = new ListNormalAdapter(this.getContext(),contentList);
-        listView.setAdapter(adapter);
+  //      ListNormalAdapter adapter = new ListNormalAdapter(this.getContext(),contentList);
+//        listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
