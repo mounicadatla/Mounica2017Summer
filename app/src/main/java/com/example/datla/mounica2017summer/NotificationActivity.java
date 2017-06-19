@@ -4,6 +4,7 @@ package com.example.datla.mounica2017summer;
  * Created by mounicadatla on 6/14/17.
  */
 
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -25,8 +26,7 @@ public class NotificationActivity extends BaseActivity {
     private NotificationManager manager;
 
 
-    @OnClick(R.id.activity_notification_small
-            )
+    @OnClick(R.id.activity_notification_small)
     public void smallnotification(View v){
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
         mBuilder.setContentTitle("Title")
@@ -115,4 +115,5 @@ public class NotificationActivity extends BaseActivity {
         ButterKnife.bind(this);
         manager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
     }
+
 }

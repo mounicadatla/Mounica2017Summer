@@ -26,7 +26,7 @@
         <activity android:name=".fragment.ActivityA$ActivityC" />
         <activity android:name=".PatchActivity$ActivityD" />
         <activity android:name=".fragment.ActivityC" />
-        <activity android:name=".BaseActivity$NotificationActivity" />
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".AdvanceListViewActivity" />
         <activity android:name=".activity_advance_list_item">
             <intent-filter>

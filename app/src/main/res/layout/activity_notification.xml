@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.datla.mounica2017summer.BaseActivity$NotificationActivity">
+    tools:context="com.example.datla.mounica2017summer.NotificationActivity">
+
     <Button
         android:id="@+id/activity_notification_small"
         android:layout_width="match_parent"

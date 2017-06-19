@@ -14,7 +14,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class AdvanceListViewActivity extends BaseActivity {
-
     @BindView(R.id.activity_advance_list_view)
     ListView lv;
 

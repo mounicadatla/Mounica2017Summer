@@ -9,7 +9,7 @@
     tools:context="com.example.datla.mounica2017summer.AdvanceListViewActivity">
 
     <ListView
-        android:layout_width="@+id/activity_advance_list_view"
+        android:layout_width="@+id/activity_advance"
         android:layout_height="55dp"></ListView>
 
 </LinearLayout>
