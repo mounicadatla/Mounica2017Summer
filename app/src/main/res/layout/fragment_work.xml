@@ -7,7 +7,7 @@
     <ListView
         android:id="@+id/fragment_work_lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -64,5 +64,5 @@
             android:gravity="center"
             android:background="@android:color/holo_blue_bright"/>
 
-    </ListView>
+
 </FrameLayout>
