@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.datla.mounica2017summer.BaseActivity;
+import com.example.datla.mounica2017summer.NotificationActivity;
 import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.adapter.AdvanceListViewActivity;
@@ -76,7 +76,7 @@ public class DemoFragment extends Fragment {
                         break;
 
                     case 3:
-                        Intent intent3= new Intent(getActivity(), BaseActivity.NotificationActivity.class);
+                        Intent intent3= new Intent(getActivity(),NotificationActivity.class);
                         startActivity(intent3);
                     case 4:
                         Intent intent4= new Intent(getActivity(), AdvanceListViewActivity.class);

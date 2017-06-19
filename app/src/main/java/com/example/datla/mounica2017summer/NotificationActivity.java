@@ -1,5 +1,9 @@
 package com.example.datla.mounica2017summer;
 
+/**
+ * Created by mounicadatla on 6/14/17.
+ */
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -14,49 +18,20 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-/**
- * Created by mounicadatla on 6/14/17.
- */
-
 public class NotificationActivity extends BaseActivity {
+
+
+    private int notifyId = 100;
     private NotificationManager manager;
-    private int notifyId=100;
-
-    @OnClick(R.id.activity_notification_small)
-    public void smallNotificaiton(View v){
-        NotificationCompat.Builder mBuilder=new NotificationCompat.Builder(this);
-        mBuilder.setContentTitle("Title")
-                .setContentText("Text")
-                .setContentIntent(getDefaultIntent(Notification.FLAG_AUTO_CANCEL))
-                .setNumber(10)
-                .setTicker("Ticker")
-                .setWhen(System.currentTimeMillis())
-                .setPriority(Notification.PRIORITY_DEFAULT)
-                .setAutoCancel(true)
-                .setOngoing(false)
-                .setDefaults(Notification.DEFAULT_SOUND)
-                .setDefaults(Notification.DEFAULT_VIBRATE)
-                .setSmallIcon(R.mipmap.ic_launcher);//md may be true/false
-
-        manager.notify(notifyId, mBuilder.build());
 
 
-    }
-
-    private PendingIntent getDefaultIntent(int flagAutoCancel) {
-
-        PendingIntent pendingIntent=
-                PendingIntent.getActivity(this, 1, new Intent(),flagAutoCancel);
-        return  pendingIntent;
-
-    }
-
-    @OnClick(R.id.activity_notification_big)
-    public void bigNotificaiton(View v) {
+    @OnClick(R.id.activity_notification_small
+            )
+    public void smallnotification(View v){
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
         mBuilder.setContentTitle("Title")
                 .setContentText("Text")
-                .setContentIntent(getDefaultIntent(Notification.FLAG_AUTO_CANCEL))
+                .setContentIntent(getDefalutIntent(Notification.FLAG_AUTO_CANCEL))
                 .setNumber(10)
                 .setTicker("Ticker")
                 .setWhen(System.currentTimeMillis())
@@ -66,27 +41,50 @@ public class NotificationActivity extends BaseActivity {
                 .setDefaults(Notification.DEFAULT_SOUND)
                 .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setSmallIcon(R.mipmap.ic_launcher);
-        NotificationCompat.InboxStyle inboxstyle = new NotificationCompat.InboxStyle();
-        String[] events = new String[]{"Line1", "Line2", "Line3", "Line4", "Line5"};
-        inboxstyle.setBigContentTitle("BigContentTitle");
-        for (int i = 0; i < events.length; i++) {
-            inboxstyle.addLine(events[i]);
+
+        manager.notify(notifyId,mBuilder.build());
+    }
+
+    private PendingIntent getDefalutIntent(int flags) {
+        PendingIntent pendingintent =PendingIntent.getActivity(this,1,new Intent(),flags);
+        return pendingintent;
+    }
+
+    @OnClick(R.id.activity_notification_big)
+    public void bignotification(View v){
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
+        mBuilder.setContentTitle("Title")
+                .setContentText("Text")
+                .setContentIntent(getDefalutIntent(Notification.FLAG_AUTO_CANCEL))
+                .setNumber(10)
+                .setTicker("Ticker")
+                .setWhen(System.currentTimeMillis())
+                .setPriority(Notification.PRIORITY_DEFAULT)
+                .setAutoCancel(true)
+                .setOngoing(false)
+                .setDefaults(Notification.DEFAULT_SOUND)
+                .setDefaults(Notification.DEFAULT_VIBRATE)
+                .setSmallIcon(R.mipmap.ic_launcher);
+        NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
+        String[] events = new String[]{"Line1","Line2","Line3","Line4","Line5"};
+
+
+        for (int i=0; i<events.length;i++){
+            inboxStyle.addLine(events[i]);
         }
-        inboxstyle.setBuilder(mBuilder);
-        mBuilder.setStyle(inboxstyle);
-        manager.notify(notifyId, mBuilder.build());
+        inboxStyle.setBigContentTitle("BigContentTitle");
+        inboxStyle.setBuilder(mBuilder);
+        mBuilder.setStyle(inboxStyle);
+        manager.notify(notifyId,mBuilder.build());
 
     }
 
     @OnClick(R.id.activity_notification_pic)
-    public void picNotificaiton(View v){
-
-//        showToast("PicNotification");
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this);
+    public void picnotification(View v){
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
         mBuilder.setContentTitle("Title")
                 .setContentText("Text")
-                .setContentIntent(getDefaultIntent(Notification.FLAG_AUTO_CANCEL))
+                .setContentIntent(getDefalutIntent(Notification.FLAG_AUTO_CANCEL))
                 .setNumber(10)
                 .setTicker("Ticker")
                 .setWhen(System.currentTimeMillis())
@@ -96,20 +94,18 @@ public class NotificationActivity extends BaseActivity {
                 .setDefaults(Notification.DEFAULT_SOUND)
                 .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setSmallIcon(R.mipmap.ic_launcher);
-        NotificationCompat.BigPictureStyle bigPictureStyle=
+        NotificationCompat.BigPictureStyle bigPictureStyle =
                 new NotificationCompat.BigPictureStyle();
         mBuilder.setStyle(bigPictureStyle);
         bigPictureStyle.setBuilder(mBuilder);
         bigPictureStyle.setBigContentTitle("BigContentTitle");
-        bigPictureStyle.setSummaryText("SummaryText");
-        Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(), R.mipmap.pic1);
+        bigPictureStyle.setSummaryText("summaryText");
+        Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(),R.mipmap.pic1);
         bigPictureStyle.bigPicture(bitmap1);
         mBuilder.setStyle(bigPictureStyle);
-
-            manager.notify(notifyId, mBuilder.build());
-
-
+        manager.notify(notifyId,mBuilder.build());
     }
+
 
 
     @Override
@@ -117,7 +113,6 @@ public class NotificationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
         ButterKnife.bind(this);
-        manager=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+        manager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
     }
 }
-

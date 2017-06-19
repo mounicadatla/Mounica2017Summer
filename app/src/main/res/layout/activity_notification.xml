@@ -12,8 +12,7 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:textAllCaps="false"
-        android:text="SmallNotification"
-        />
+        android:text="SmallNotification"/>
 
     <Button
         android:id="@+id/activity_notification_big"
@@ -21,8 +20,7 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:textAllCaps="false"
-        android:text="BigNotification"
-        />
+        android:text="BigNotification"/>
 
     <Button
         android:id="@+id/activity_notification_pic"
@@ -30,9 +28,5 @@
         android:layout_height="60dp"
         android:gravity="center"
         android:textAllCaps="false"
-        android:text="PicNotification"
-        />
-
-
-
+        android:text="PicNotification"/>
 </LinearLayout>
