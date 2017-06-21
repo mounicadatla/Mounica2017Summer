@@ -28,7 +28,7 @@ public class BaseActivity extends AppCompatActivity {
 
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
-    public void goTOActivity(Class c){
+    public void goToActivity(Class c){
         Intent intent = new Intent(this, c);
         startActivity(intent);
 
