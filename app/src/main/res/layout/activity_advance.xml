@@ -9,7 +9,8 @@
     tools:context="com.example.datla.mounica2017summer.AdvanceListViewActivity">
 
     <ListView
-        android:layout_width="@+id/activity_advance"
+        android:id="@+id/activity_advance"
+        android:layout_width="match_parent"
         android:layout_height="55dp"></ListView>
 
 </LinearLayout>

@@ -17,17 +17,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".viewPagerActivity" />
+         <activity android:name=".activity.ScaleTypeActivity" />
+        <activity android:name=".activity.PatchActivity" />
         <activity
-            android:name=".fragment.ActivityA"
-            android:launchMode="singleInstance" />
-        <activity android:name=".ScaleTypeActivity" />
-        <activity android:name=".PatchActivity" />
-        <activity android:name=".fragment.ActivityB" />
-        <activity android:name=".fragment.ActivityA$ActivityC" />
-        <activity android:name=".PatchActivity$ActivityD" />
-        <activity android:name=".fragment.ActivityC" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".AdvanceListViewActivity" />
+            android:name=".activity.ActivityA"
+            android:launchMode="standard" />
+
+        <activity android:name=".activity.ActivityB"
+            android:launchMode="singleTop"
+            />
+        <activity android:name=".activity.ActivityC"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".activity.ActivityD"
+            android:launchMode="singleInstance"
+            />
+
+        <activity android:name=".activity.NotificationActivity" />
+        <activity android:name=".activity.AdvanceListViewActivity" />
         <activity android:name=".activity_advance_list_item">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

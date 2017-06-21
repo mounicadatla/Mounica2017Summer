@@ -1,4 +1,4 @@
-package com.example.datla.mounica2017summer;
+package com.example.datla.mounica2017summer.activity;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.example.datla.mounica2017summer.adapter.ScalePagerAdapter;
+import com.example.datla.mounica2017summer.R;
 
 import java.util.ArrayList;
 

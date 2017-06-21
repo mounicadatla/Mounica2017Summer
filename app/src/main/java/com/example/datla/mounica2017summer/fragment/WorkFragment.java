@@ -12,13 +12,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-
-import com.example.datla.mounica2017summer.AdvanceListViewActivity;
-import com.example.datla.mounica2017summer.NotificationActivity;
-import com.example.datla.mounica2017summer.PatchActivity;
 import com.example.datla.mounica2017summer.R;
-import com.example.datla.mounica2017summer.ScaleTypeActivity;
-import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
+import com.example.datla.mounica2017summer.activity.NotificationActivity;
+import com.example.datla.mounica2017summer.activity.PatchActivity;
+import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.viewPagerActivity;
 
 import java.util.ArrayList;

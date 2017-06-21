@@ -1,4 +1,4 @@
-package com.example.datla.mounica2017summer.fragment;
+package com.example.datla.mounica2017summer.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.example.datla.mounica2017summer;
+package com.example.datla.mounica2017summer.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,14 +6,22 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.datla.mounica2017summer.adapter.AdvanceListViewAdapter;
+import com.example.datla.mounica2017summer.BaseActivity;
+import com.example.datla.mounica2017summer.activity.AdvanceListViewAdapter;
+import com.example.datla.mounica2017summer.R;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+//import static com.example.datla.mounica2017summer.R.layout.activity_advance_list_view;
+
+//import static com.example.datla.mounica2017summer.R.id.activity_advance_list_view;
+
+
 public class AdvanceListViewActivity extends BaseActivity {
+
     @BindView(R.id.activity_advance_list_view)
     ListView lv;
 
@@ -21,6 +29,9 @@ public class AdvanceListViewActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        activity_advance_list_view
+//        setContentView(R.layout.activity_advance);
+//        setContentView(R.layout.activity_advance_list_item);
         setContentView(R.layout.activity_advance_list_view);
         ButterKnife.bind(this);
         ArrayList<String> list = new ArrayList<>();
@@ -52,12 +63,18 @@ public class AdvanceListViewActivity extends BaseActivity {
         lv.addFooterView(tv1);
 
 
+//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                showToast(String.valueOf(position));
+//            }
+//        });
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 showToast(String.valueOf(position));
             }
         });
-
     }
 }

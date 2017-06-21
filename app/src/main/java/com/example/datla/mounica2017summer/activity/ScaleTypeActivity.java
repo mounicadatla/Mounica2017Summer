@@ -1,12 +1,12 @@
-package com.example.datla.mounica2017summer;
+package com.example.datla.mounica2017summer.activity;
 
-import android.graphics.pdf.PdfDocument;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.adapter.ScalePagerAdapter;
 
 import java.util.ArrayList;

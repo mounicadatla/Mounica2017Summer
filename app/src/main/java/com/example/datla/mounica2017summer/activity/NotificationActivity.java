@@ -1,4 +1,4 @@
-package com.example.datla.mounica2017summer;
+package com.example.datla.mounica2017summer.activity;
 
 /**
  * Created by mounicadatla on 6/14/17.
@@ -14,6 +14,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
 import android.view.View;
+
+import com.example.datla.mounica2017summer.BaseActivity;
+import com.example.datla.mounica2017summer.R;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

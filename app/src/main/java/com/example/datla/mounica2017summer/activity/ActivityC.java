@@ -1,4 +1,4 @@
-package com.example.datla.mounica2017summer.fragment;
+package com.example.datla.mounica2017summer.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +9,7 @@ import com.example.datla.mounica2017summer.R;
 
 import butterknife.ButterKnife;
 
-public class ActivityB extends BaseActivity {
+public class ActivityC extends BaseActivity {
 
     //@OnClick(R.id.test)
     public void click(View v){
@@ -19,7 +19,7 @@ public class ActivityB extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_b);
+        setContentView(R.layout.activity_c);
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
         ButterKnife.bind(this);
 

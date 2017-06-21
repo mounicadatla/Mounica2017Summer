@@ -1,4 +1,4 @@
-package com.example.datla.mounica2017summer.adapter;
+package com.example.datla.mounica2017summer.activity;
 
 import android.content.Context;
 import android.util.Log;
@@ -56,8 +56,8 @@ public class AdvanceListViewAdapter extends BaseAdapter {
             viewHolder.rl_even= (RelativeLayout) convertView.findViewById(R.id.even);
             viewHolder.tv = (TextView) convertView.findViewById
                     (R.id.
-                    activity_advance_list_item_tv
-            );
+                            activity_advance_list_item_tv
+                    );
             convertView.setTag(viewHolder);
         }else{
             viewHolder = (ViewHolder) convertView.getTag();
