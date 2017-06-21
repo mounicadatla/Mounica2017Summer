@@ -4,9 +4,9 @@ package com.example.datla.mounica2017summer.activity;
  * Created by mounicadatla on 6/18/17.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.datla.mounica2017summer.BaseActivity;
 import com.example.datla.mounica2017summer.R;
@@ -36,12 +36,18 @@ public class ActivityD extends BaseActivity {
     public void clickD(View v){
         goToActivity(ActivityD.class);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_d);
-        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
         ButterKnife.bind(this);
+        showToast("OnCreate");
+    }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        showToast("OnNewIntent");
     }
 }

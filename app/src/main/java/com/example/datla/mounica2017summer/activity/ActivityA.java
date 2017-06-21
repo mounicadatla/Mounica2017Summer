@@ -1,13 +1,11 @@
 package com.example.datla.mounica2017summer.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.datla.mounica2017summer.BaseActivity;
 import com.example.datla.mounica2017summer.R;
-import android.app.Activity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -35,13 +33,20 @@ public class ActivityA extends BaseActivity {
         goToActivity(ActivityD.class);
     }
 
-//
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
-        Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show();
         ButterKnife.bind(this);
+        showToast("OnCreate");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        showToast("OnNewIntent");
     }
 
 }
