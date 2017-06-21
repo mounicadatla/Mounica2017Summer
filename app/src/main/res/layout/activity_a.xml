@@ -9,67 +9,69 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_above="@+id/Linear_button_laundmode_bottom_pannel"
+        android:id="@+id/Linear_button_A_text"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:text="A"
         android:textColor="@android:color/white"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:layout_above="@+id/Linear_button_laundmode_bottom_pannel"
         android:textSize="100sp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0" />
 
     <LinearLayout
         android:id="@+id/Linear_button_laundmode_bottom_pannel"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
+        android:layout_above="@+id/Linear_button_A_text"
+        android:layout_alignParentBottom="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    <Button
-        android:id="@+id/Button_A"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:text="A"
-        android:layout_weight="1"
-        android:textSize="26sp" />
+        app:layout_constraintRight_toRightOf="parent">
 
-    <Button
-        android:id="@+id/Button_B"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:text="B"
-        android:layout_weight="1"
-        android:textSize="26sp" />
-    <Button
-        android:id="@+id/Button_C"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:text="C"
-        android:layout_weight="1"
-        android:textSize="26sp" />
+        <Button
+            android:id="@+id/Button_A"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="A"
+            android:textSize="26sp" />
 
-    <Button
-        android:id="@+id/Button_D"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="D"
-        android:textSize="26sp" />
+        <Button
+            android:id="@+id/Button_B"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="B"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/Button_C"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="C"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/Button_D"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="D"
+            android:textSize="26sp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
