@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.datla.mounica2017summer.AdvanceListViewActivity">
+    tools:context="com.example.datla.mounica2017summer.activity.AdvanceListViewActivity">
 
     <ListView
         android:id="@+id/activity_advance"

@@ -37,6 +37,7 @@ public class DemoFragment extends Fragment {
         contentList.add("9Patch");
         contentList.add("Notification");
         contentList.add("AdvanceListView");
+        contentList.add("B");
         contentList.add("C");
         contentList.add("LaunchMode");
         contentList.add("E");
