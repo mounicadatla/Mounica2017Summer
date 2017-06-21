@@ -1,14 +1,23 @@
 package com.example.datla.mounica2017summer.adapter;
-/**
-import FragmentStateAdapter;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
- * Created by mounicadatla on 6/19/17.
+public class ViewFragmentStateAdapter extends FragmentStatePagerAdapter{
+    @Override
+    public Fragment getItem(int position) {
+        return null;
+    }
 
+    public ViewFragmentStateAdapter(FragmentManager fm) {
+        super(fm);
+    }
 
-public class ViewFragmentStateAdapter extends FragmentStateAdapter {
- private final ArrayList<Pair<String, Fragment>>
- </String,>
+    @Override
+    public int getCount() {
+        return 0;
+    }
+
 
 }
-*/
