@@ -95,8 +95,8 @@ public class DemoFragment extends Fragment {
                         startActivity(intent5);
                         break;
                     case 6:
-                        Intent intent7 = new Intent(getActivity(), ActivityA.class);
-                        startActivity(intent7);
+                        Intent intent6 = new Intent(getActivity(), ActivityA.class);
+                        startActivity(intent6);
                         default:
                 }
             }

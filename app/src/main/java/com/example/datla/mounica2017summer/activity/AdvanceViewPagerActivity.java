@@ -33,6 +33,9 @@ public class AdvanceViewPagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advance_view_pager);
+
+        viewPager = (ViewPager) findViewById(R.id.activity_advance_view_pager);
+
         ButterKnife.bind(this);
         list.add(new Pair<String, Fragment>("Red", new RedFragment()));
         list.add(new Pair<String, Fragment>("Green", new GreenFragment()));
