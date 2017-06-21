@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.datla.mounica2017summer.AdvanceViewPagerActivity">
+    tools:context="com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity">
 
     <android.support.design.widget.TabLayout
         android:id= "@+id/activity_advance_view_pager_tablayout"

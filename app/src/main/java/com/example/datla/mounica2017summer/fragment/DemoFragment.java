@@ -11,13 +11,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.datla.mounica2017summer.R;
+import com.example.datla.mounica2017summer.activity.ActivityA;
 import com.example.datla.mounica2017summer.activity.AdvanceListViewActivity;
+import com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity;
 import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
-import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
-import com.example.datla.mounica2017summer.activity.ActivityA;
-
 import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
 import com.example.datla.mounica2017summer.viewPagerActivity;
 
@@ -37,8 +37,7 @@ public class DemoFragment extends Fragment {
         contentList.add("9Patch");
         contentList.add("Notification");
         contentList.add("AdvanceListView");
-        contentList.add("B");
-        contentList.add("C");
+        contentList.add("AdvanceViewPager");
         contentList.add("LaunchMode");
         contentList.add("E");
         contentList.add("F");
@@ -84,18 +83,21 @@ public class DemoFragment extends Fragment {
                         break;
                     case 3:
                         Intent intent3 = new Intent(getActivity(),NotificationActivity.class);
-//                        Intent intent3 = new Intent(getActivity(),PatchActivity.class);
-
                         startActivity(intent3);
                         break;
                     case 4:
                         Intent intent4 = new Intent(getActivity(), AdvanceListViewActivity.class);
                         startActivity(intent4);
                         break;
-                    case 7:
+                    case 5:
+
+                        Intent intent5 = new Intent(getActivity(), AdvanceViewPagerActivity.class);
+                        startActivity(intent5);
+                        break;
+                    case 6:
                         Intent intent7 = new Intent(getActivity(), ActivityA.class);
                         startActivity(intent7);
-                        break;
+                        default:
                 }
             }
         });

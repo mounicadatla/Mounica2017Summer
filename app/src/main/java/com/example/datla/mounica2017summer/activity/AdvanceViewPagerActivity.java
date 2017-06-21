@@ -5,9 +5,11 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Pair;
+//import android.util.Pair;
+import android.support.v4.util.Pair;
 
 import com.example.datla.mounica2017summer.R;
+import com.example.datla.mounica2017summer.adapter.ViewFragmentStateAdapter;
 import com.example.datla.mounica2017summer.fragment.BlueFragment;
 import com.example.datla.mounica2017summer.fragment.GreenFragment;
 import com.example.datla.mounica2017summer.fragment.RedFragment;
@@ -35,6 +37,10 @@ public class AdvanceViewPagerActivity extends AppCompatActivity {
         list.add(new Pair<String, Fragment>("Red", new RedFragment()));
         list.add(new Pair<String, Fragment>("Green", new GreenFragment()));
         list.add(new Pair<String, Fragment>("Blue", new BlueFragment()));
+        ViewFragmentStateAdapter adapter =
+                new ViewFragmentStateAdapter(this.getSupportFragmentManager(), list);
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }
 

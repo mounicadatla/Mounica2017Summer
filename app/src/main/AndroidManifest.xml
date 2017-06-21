@@ -34,6 +34,7 @@
             android:launchMode="singleInstance" />
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.AdvanceListViewActivity" />
+        <activity android:name=".activity.AdvanceViewPagerActivity" />
         <activity android:name=".activity_advance_list_item">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
