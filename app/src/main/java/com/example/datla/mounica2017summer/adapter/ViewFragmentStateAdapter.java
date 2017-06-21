@@ -9,10 +9,13 @@ import java.util.ArrayList;
 
 public class ViewFragmentStateAdapter extends FragmentStatePagerAdapter{
     private final ArrayList<Pair<String , Fragment>> list;
-    public ViewFragmentStateAdapter(FragmentManager fm, ArrayList<Pair<String, Fragment>> list){
+    public ViewFragmentStateAdapter(FragmentManager fm,
+                                    ArrayList<Pair<String, Fragment>> list)
+    {
         super(fm);
         this.list=list;
     }
+
     @Override
     public Fragment getItem(int position) {
         return list.get(position).second;
@@ -22,11 +25,12 @@ public class ViewFragmentStateAdapter extends FragmentStatePagerAdapter{
 
     @Override
     public int getCount() {
-        return 0;
+        return list.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        return list.get(position).first;
+
     }
 }

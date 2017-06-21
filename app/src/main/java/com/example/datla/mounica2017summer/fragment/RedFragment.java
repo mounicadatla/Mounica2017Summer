@@ -46,6 +46,40 @@ public class RedFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        UtilLog.d("Fragment", "RedFragmentonStart");
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        UtilLog.d("Fragment", "RedFragmentResume");
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        UtilLog.d("Fragment", "RedFragmentPause");
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        UtilLog.d("Fragment", "RedFragmentStop");
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        UtilLog.d("Fragment", "RedFragmentDestroy");
+
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,7 +89,7 @@ public class RedFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         //Log.d("Fragment", "onCreate");
-        UtilLog.d("Fragment", "Oncreate");
+        UtilLog.d("Fragment", "OncreateRed");
 
 
     }

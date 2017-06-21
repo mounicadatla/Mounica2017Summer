@@ -48,13 +48,56 @@ public class BlueFragment extends Fragment {
     }
 
     @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        UtilLog.d("Fragment", "BlueFragmentonStart");
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        UtilLog.d("Fragment", "BlueFragmentResume");
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        UtilLog.d("Fragment", "BlueFragmentPause");
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        UtilLog.d("Fragment", "BlueFragmentStop");
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        UtilLog.d("Fragment", "BlueFragmentDestroy");
+
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        UtilLog.d("Fragment", "BlueFragmentCreate");
+
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

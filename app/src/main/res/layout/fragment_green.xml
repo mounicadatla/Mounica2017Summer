@@ -5,6 +5,11 @@
     android:background="@android:color/holo_green_dark"
     tools:context="com.example.datla.mounica2017summer.fragment.GreenFragment">
 
+    <ListView
+        android:id="@+id/fragment_blue_lv"
+        android:text="Green fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 
 
 </FrameLayout>

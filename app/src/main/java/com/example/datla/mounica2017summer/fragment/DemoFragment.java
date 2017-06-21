@@ -90,7 +90,6 @@ public class DemoFragment extends Fragment {
                         startActivity(intent4);
                         break;
                     case 5:
-
                         Intent intent5 = new Intent(getActivity(), AdvanceViewPagerActivity.class);
                         startActivity(intent5);
                         break;
