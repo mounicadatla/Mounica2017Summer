@@ -3,6 +3,7 @@
     package="com.example.datla.mounica2017summer">
 
     <application
+        android:name=".MounicaApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,22 +18,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".viewPagerActivity" />
-         <activity android:name=".activity.ScaleTypeActivity" />
+        <activity android:name=".activity.ScaleTypeActivity" />
         <activity android:name=".activity.PatchActivity" />
         <activity
             android:name=".activity.ActivityA"
             android:launchMode="standard" />
-
-        <activity android:name=".activity.ActivityB"
-            android:launchMode="singleTop"
-            />
-        <activity android:name=".activity.ActivityC"
-            android:launchMode="singleTask"
-            />
-        <activity android:name=".activity.ActivityD"
-            android:launchMode="singleInstance"
-            />
-
+        <activity
+            android:name=".activity.ActivityB"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.ActivityC"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ActivityD"
+            android:launchMode="singleInstance" />
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.AdvanceListViewActivity" />
         <activity android:name=".activity_advance_list_item">
@@ -42,6 +41,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AdvanceViewPagerActivity"></activity>
     </application>
 
 </manifest>
