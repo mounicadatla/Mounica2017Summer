@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.example.datla.mounica2017summer.BaseActivity;
 import com.example.datla.mounica2017summer.R;
+import com.example.datla.mounica2017summer.audio.BaseBean;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -40,7 +41,23 @@ public class ActivityA extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
         ButterKnife.bind(this);
-        showToast("OnCreate");
+        Intent intent=getIntent();
+        Bundle bundle = intent.getBundleExtra("Bundle");
+        String bs = bundle.getString("StringBundle");
+        int bi= bundle.getInt("IntegerBundle",0);
+        BaseBean bean= (BaseBean) bundle.getSerializable("Object");
+        shortToast(bean.getName());
+        shortToast(bs);
+
+        //shortToast("Integer");
+        //String s =intent.getStringExtra("StringInfo");
+        //showToast("OnCreate");
+        //int i= intent.getIntExtra("IntegerInfo", 0);
+        //shortToast(s);
+
+        //shortToast(String.valueOf(i));
+        //shortToast(String.valueOf(i));
+        //shortToast("Integer is:"+i);
     }
 
     @Override

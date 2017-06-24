@@ -17,8 +17,10 @@ import com.example.datla.mounica2017summer.activity.AdvanceListViewActivity;
 import com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity;
 import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
+import com.example.datla.mounica2017summer.activity.ResultActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
+import com.example.datla.mounica2017summer.audio.BaseBean;
 import com.example.datla.mounica2017summer.viewPagerActivity;
 
 import java.util.ArrayList;
@@ -39,7 +41,7 @@ public class DemoFragment extends Fragment {
         contentList.add("AdvanceListView");
         contentList.add("AdvanceViewPager");
         contentList.add("LaunchMode");
-        contentList.add("E");
+        contentList.add("ActivityResult");
         contentList.add("F");
         contentList.add("G");
         contentList.add("H");
@@ -95,13 +97,25 @@ public class DemoFragment extends Fragment {
                         break;
                     case 6:
                         Intent intent6 = new Intent(getActivity(), ActivityA.class);
+                        intent6.putExtra("StringInfo","fromDemoFragment");
+                        intent6.putExtra("IntegerInfo",10);
+                        Bundle bundle =new Bundle();
+                        BaseBean bean=new BaseBean();
+                        bean.setName("bean");
+                        bundle.putString("StringBundle", "FromBundleDemo");
+                        bundle.putInt("IntegerBundle",101);
+                        bundle.putSerializable("Object", bean);
+                        intent6.putExtra("Bundle","bundle");
                         startActivity(intent6);
+                        break;
+                    case 7:
+                          Intent intent7= new Intent(getActivity(), ResultActivity.class);
+                          startActivity (intent7);
+                        break;
                         default:
                 }
             }
         });
-
-
 
         return view;
     }

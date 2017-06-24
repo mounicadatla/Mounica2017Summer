@@ -42,6 +42,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.ResultActivity1" />
+        <activity android:name=".activity.ResultActivity2" />
+        <activity android:name=".activity.ResultActivity"></activity>
     </application>
 
 </manifest>
