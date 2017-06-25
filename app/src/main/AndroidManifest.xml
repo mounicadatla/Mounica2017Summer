@@ -44,7 +44,10 @@
         </activity>
         <activity android:name=".activity.ResultActivity1" />
         <activity android:name=".activity.ResultActivity2" />
-        <activity android:name=".activity.ResultActivity"></activity>
+        <activity android:name=".activity.ResultActivity" />
+        <activity android:name=".activity.Activity" />
+        <activity android:name=".activity.RadioGroupActivity" />
+        <activity android:name=".activity.CheckBoxActivity"></activity>
     </application>
 
 </manifest>

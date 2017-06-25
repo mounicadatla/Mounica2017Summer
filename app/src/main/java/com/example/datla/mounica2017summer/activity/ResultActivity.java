@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
+
+import com.example.datla.mounica2017summer.BaseActivity;
 
 import com.example.datla.mounica2017summer.R;
 
@@ -14,7 +17,7 @@ import static android.R.attr.data;
 
 public class ResultActivity extends AppCompatActivity {
    private  final  int ACTIVITY1=123;
-    private final int ACTIVITY2=321;
+    private final  int ACTIVITY2=321;
 
     @OnClick(R.id.activity_result_bt1)
     public void toResult(View view) {
@@ -23,11 +26,12 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.activity_result_bt2)
-    public void toResult(View view) {
+    public void toResult1(View view) {
         Intent intent = new Intent(this, ResultActivity2.class);
         startActivityForResult(intent, ACTIVITY2);
 
     }
+
     @Override
         protected void onCreate (Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
@@ -41,11 +45,20 @@ public class ResultActivity extends AppCompatActivity {
             String s= data.getStringExtra("Data");
 
             switch (requestCode){
-                case ACTIVITY1:
-                    showToast("FromResultActivity1");
+               case ACTIVITY1:
+//                   shortToast(s+"FromResultActivity1");
+                   Toast.makeText(this, s+"FromResultActivity1", Toast.LENGTH_SHORT).show();
+
+                      break;
+                case ACTIVITY2:
+//                    shortToast(s+"FromResultActivity1");
+                    Toast.makeText(this, s+"FromResultActivity2", Toast.LENGTH_SHORT).show();
+
+                    break;
+                default:
+
             }
 
         }
 
     }
-}

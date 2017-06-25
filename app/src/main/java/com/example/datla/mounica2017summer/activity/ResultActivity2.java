@@ -1,5 +1,6 @@
 package com.example.datla.mounica2017summer.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -13,8 +14,19 @@ public class ResultActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_result2);
     }
 
+
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public void onBackPressed(){
+        Intent intent =new Intent();
+        intent.putExtra("Data","Data");
+        setResult(RESULT_OK, intent);
+        super.onBackPressed();
+
     }
+
+//    @Override
+//    protected Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+//    }
+
 }

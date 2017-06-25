@@ -15,8 +15,10 @@ import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.ActivityA;
 import com.example.datla.mounica2017summer.activity.AdvanceListViewActivity;
 import com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity;
+import com.example.datla.mounica2017summer.activity.CheckBoxActivity;
 import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
+import com.example.datla.mounica2017summer.activity.RadioGroupActivity;
 import com.example.datla.mounica2017summer.activity.ResultActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
@@ -42,8 +44,8 @@ public class DemoFragment extends Fragment {
         contentList.add("AdvanceViewPager");
         contentList.add("LaunchMode");
         contentList.add("ActivityResult");
-        contentList.add("F");
-        contentList.add("G");
+        contentList.add("RadioGroup");
+        contentList.add("CheckBox");
         contentList.add("H");
         contentList.add("I");
         contentList.add("J");
@@ -112,6 +114,15 @@ public class DemoFragment extends Fragment {
                           Intent intent7= new Intent(getActivity(), ResultActivity.class);
                           startActivity (intent7);
                         break;
+                    case 8:
+                        Intent intent8= new Intent(getActivity(), RadioGroupActivity.class);
+                        startActivity (intent8);
+                        break;
+                    case 9:
+                        Intent intent9= new Intent(getActivity(), CheckBoxActivity.class);
+                        startActivity (intent9);
+                        break;
+
                         default:
                 }
             }
