@@ -16,6 +16,7 @@ import com.example.datla.mounica2017summer.activity.ActivityA;
 import com.example.datla.mounica2017summer.activity.AdvanceListViewActivity;
 import com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity;
 import com.example.datla.mounica2017summer.activity.CheckBoxActivity;
+import com.example.datla.mounica2017summer.activity.DialogActivity;
 import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
 import com.example.datla.mounica2017summer.activity.RadioGroupActivity;
@@ -46,7 +47,7 @@ public class DemoFragment extends Fragment {
         contentList.add("ActivityResult");
         contentList.add("RadioGroup");
         contentList.add("CheckBox");
-        contentList.add("H");
+        contentList.add("Dialog");
         contentList.add("I");
         contentList.add("J");
         contentList.add("K");
@@ -121,6 +122,10 @@ public class DemoFragment extends Fragment {
                     case 9:
                         Intent intent9= new Intent(getActivity(), CheckBoxActivity.class);
                         startActivity (intent9);
+                        break;
+                    case 10:
+                        Intent intent10= new Intent(getActivity(), DialogActivity.class);
+                        startActivity (intent10);
                         break;
 
                         default:
