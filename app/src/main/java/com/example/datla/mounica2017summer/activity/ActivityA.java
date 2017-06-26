@@ -3,6 +3,7 @@ package com.example.datla.mounica2017summer.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.datla.mounica2017summer.BaseActivity;
 import com.example.datla.mounica2017summer.R;
@@ -41,14 +42,14 @@ public class ActivityA extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
         ButterKnife.bind(this);
-        Intent intent=getIntent();
-        Bundle bundle = intent.getBundleExtra("Bundle");
-        String bs = bundle.getString("StringBundle");
-        int bi= bundle.getInt("IntegerBundle",0);
-        BaseBean bean= (BaseBean) bundle.getSerializable("Object");
-        shortToast(bean.getName());
-        shortToast(bs);
-
+//        Intent intent=getIntent();
+//        Bundle bundle = intent.getBundleExtra("Bundle");
+//        String bs = bundle.getString("StringBundle");
+//        int bi= bundle.getInt("IntegerBundle",0);
+//        BaseBean bean= (BaseBean) bundle.getSerializable("Object");
+//        shortToast(bean.getName());
+//        shortToast(bs);
+        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
         //shortToast("Integer");
         //String s =intent.getStringExtra("StringInfo");
         //showToast("OnCreate");

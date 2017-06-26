@@ -1,29 +1,47 @@
 package com.example.datla.mounica2017summer.dialog;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.StyleRes;
+import android.view.View;
+
 import com.example.datla.mounica2017summer.R;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by kkishorekr on 6/25/17.
  */
 
 public class CustomDialog extends Dialog {
-    public CustomDialog(@NonNull Context context) {
+
+    private final ICustomDialogListener listener;
+
+    public interface ICustomDialogListener{
+        public void onOKClicked(String msg);
+      //  public void onCancelClicked(String msg);
+
+    }
+
+
+
+    @OnClick(R.id.dialog_custom_ok)
+public void ok(View view){
+listener.onOKClicked("You clicked OK");
+    cancel();
+
+}
+    public CustomDialog(@NonNull Context context,ICustomDialogListener listener) {
 //        super(context);
         super(context,R.style.dialog);
         setContentView(R.layout.dialog_custom);
+        ButterKnife.bind(this);
+        this.listener=listener;
 
     }
 
-    public CustomDialog(@NonNull Context context, @StyleRes int themeResId) {
-        super(context, themeResId);
-    }
-
-    protected CustomDialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
-        super(context, cancelable, cancelListener);
-    }
 }
