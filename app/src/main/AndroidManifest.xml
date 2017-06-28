@@ -50,7 +50,8 @@
         <activity android:name=".activity.CheckBoxActivity" />
         <activity android:name=".activity.DialogActivity" />
         <activity android:name=".activity.HandlerActivity" />
-        <activity android:name=".activity.RunnableHandlerActivity"></activity>
+        <activity android:name=".activity.RunnableHandlerActivity" />
+        <activity android:name=".activity.AnimationActivity"></activity>
     </application>
 
 </manifest>

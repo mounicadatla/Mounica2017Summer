@@ -15,6 +15,7 @@ import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.ActivityA;
 import com.example.datla.mounica2017summer.activity.AdvanceListViewActivity;
 import com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity;
+import com.example.datla.mounica2017summer.activity.AnimationActivity;
 import com.example.datla.mounica2017summer.activity.CheckBoxActivity;
 import com.example.datla.mounica2017summer.activity.DialogActivity;
 import com.example.datla.mounica2017summer.activity.HandlerActivity;
@@ -52,7 +53,7 @@ public class DemoFragment extends Fragment {
         contentList.add("Dialog");
         contentList.add("Handler");
         contentList.add("Runnable Handler");
-        contentList.add("K");
+        contentList.add("Animation");
     }
 
 
@@ -136,6 +137,10 @@ public class DemoFragment extends Fragment {
                     case 12:
                         Intent intent12= new Intent(getActivity(), RunnableHandlerActivity.class);
                         startActivity (intent12);
+                        break;
+                    case 13:
+                        Intent intent13= new Intent(getActivity(), AnimationActivity.class);
+                        startActivity (intent13);
                         break;
 
                         default:
