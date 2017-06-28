@@ -49,7 +49,8 @@
         <activity android:name=".activity.RadioGroupActivity" />
         <activity android:name=".activity.CheckBoxActivity" />
         <activity android:name=".activity.DialogActivity" />
-        <activity android:name=".activity.HandlerActivity"></activity>
+        <activity android:name=".activity.HandlerActivity" />
+        <activity android:name=".activity.RunnableHandlerActivity"></activity>
     </application>
 
 </manifest>

@@ -163,6 +163,8 @@ public class DialogActivity extends BaseActivity{
                 msg.what = DIALOG;
                 msg.setData(bundle);
                 mHandler.sendMessage(msg);
+//                shortToast("Download finished");// this will cause error window leak
+
                 progressDialog.cancel();
             }
         }).start();

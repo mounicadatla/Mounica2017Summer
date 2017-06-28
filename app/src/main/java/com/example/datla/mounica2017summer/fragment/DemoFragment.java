@@ -17,10 +17,12 @@ import com.example.datla.mounica2017summer.activity.AdvanceListViewActivity;
 import com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity;
 import com.example.datla.mounica2017summer.activity.CheckBoxActivity;
 import com.example.datla.mounica2017summer.activity.DialogActivity;
+import com.example.datla.mounica2017summer.activity.HandlerActivity;
 import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
 import com.example.datla.mounica2017summer.activity.RadioGroupActivity;
 import com.example.datla.mounica2017summer.activity.ResultActivity;
+import com.example.datla.mounica2017summer.activity.RunnableHandlerActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
 import com.example.datla.mounica2017summer.audio.BaseBean;
@@ -48,8 +50,8 @@ public class DemoFragment extends Fragment {
         contentList.add("RadioGroup");
         contentList.add("CheckBox");
         contentList.add("Dialog");
-        contentList.add("I");
-        contentList.add("J");
+        contentList.add("Handler");
+        contentList.add("Runnable Handler");
         contentList.add("K");
     }
 
@@ -126,6 +128,14 @@ public class DemoFragment extends Fragment {
                     case 10:
                         Intent intent10= new Intent(getActivity(), DialogActivity.class);
                         startActivity (intent10);
+                        break;
+                    case 11:
+                        Intent intent11= new Intent(getActivity(), HandlerActivity.class);
+                        startActivity (intent11);
+                        break;
+                    case 12:
+                        Intent intent12= new Intent(getActivity(), RunnableHandlerActivity.class);
+                        startActivity (intent12);
                         break;
 
                         default:
