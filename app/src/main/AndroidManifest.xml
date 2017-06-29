@@ -51,7 +51,10 @@
         <activity android:name=".activity.DialogActivity" />
         <activity android:name=".activity.HandlerActivity" />
         <activity android:name=".activity.RunnableHandlerActivity" />
-        <activity android:name=".activity.AnimationActivity"></activity>
+        <activity android:name=".activity.AnimationActivity" />
+        <activity android:name=".AnimatorActivity" />
+        <activity android:name=".activity.GestureActivity" />
+        <activity android:name=".activity.SharedPreferenceActivity"></activity>
     </application>
 
 </manifest>
