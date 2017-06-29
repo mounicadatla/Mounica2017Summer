@@ -6,6 +6,8 @@ import android.util.Log;
  * Created by mounicadatla on 6/20/17.
  */
     public class UtilLog {
+
+
     private static boolean isLog=false;
 
      public static void setIsLog(boolean b) {
@@ -23,4 +25,9 @@ import android.util.Log;
         }
     }
 
-}
+    public static void logD(String key, String value){
+        if(isLog){
+            Log.d(key, value);
+        }
+    }
+    }

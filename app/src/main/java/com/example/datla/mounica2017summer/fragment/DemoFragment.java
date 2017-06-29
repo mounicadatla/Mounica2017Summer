@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.datla.mounica2017summer.AnimatorActivity;
 import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.ActivityA;
 import com.example.datla.mounica2017summer.activity.AdvanceListViewActivity;
@@ -18,6 +19,7 @@ import com.example.datla.mounica2017summer.activity.AdvanceViewPagerActivity;
 import com.example.datla.mounica2017summer.activity.AnimationActivity;
 import com.example.datla.mounica2017summer.activity.CheckBoxActivity;
 import com.example.datla.mounica2017summer.activity.DialogActivity;
+import com.example.datla.mounica2017summer.activity.GestureActivity;
 import com.example.datla.mounica2017summer.activity.HandlerActivity;
 import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
@@ -54,6 +56,9 @@ public class DemoFragment extends Fragment {
         contentList.add("Handler");
         contentList.add("Runnable Handler");
         contentList.add("Animation");
+        contentList.add("Animator");
+        contentList.add("Gesture");
+
     }
 
 
@@ -141,6 +146,14 @@ public class DemoFragment extends Fragment {
                     case 13:
                         Intent intent13= new Intent(getActivity(), AnimationActivity.class);
                         startActivity (intent13);
+                        break;
+                    case 14:
+                        Intent intent14= new Intent(getActivity(), AnimatorActivity.class);
+                        startActivity (intent14);
+                        break;
+                    case 15:
+                        Intent intent15= new Intent(getActivity(), GestureActivity.class);
+                        startActivity (intent15);
                         break;
 
                         default:

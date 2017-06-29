@@ -10,13 +10,13 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 public class SharedPreferenceActivity extends AppCompatActivity {
-    @BindView(.id.activity_sharedpreference_email)
-    EditText emailEditText;
-    @BindView(R.id.activity_sharedpreference_password)
-    EditText passwordEditText;
+//    @BindView(R.id.activity_sharedpreference_email)
+  //  EditText emailEditText;
+   // @BindView(R.id.activity_sharedpreference_password)
+    //EditText passwordEditText;
 
-    @OnClick(R.id.activity_sharepreference_login)
-    public void
+//    @OnClick(R.id.activity_sharepreference_login)
+//    public void
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
