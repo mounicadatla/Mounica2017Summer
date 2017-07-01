@@ -17,6 +17,7 @@ import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.activity.WorkcheckboxActivity;
+import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
 import com.example.datla.mounica2017summer.viewPagerActivity;
 
 import java.util.ArrayList;
@@ -41,7 +42,6 @@ public class WorkFragment extends Fragment {
     private RelativeLayout relativeView;
 
 
-
     public WorkFragment() {
         // Required empty public constructor
         context = getContext();
@@ -58,27 +58,26 @@ public class WorkFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment WorkFragment.
+//     * @param param1 Parameter 1.
+  //   * @param param2 Parameter 2.
+  //   * @return A new instance of fragment WorkFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static WorkFragment newInstance(String param1, String param2) {
-        WorkFragment fragment = new WorkFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+//    public static WorkFragment newInstance(String param1, String param2) {
+//        WorkFragment fragment = new WorkFragment();
+//        Bundle args = new Bundle();
+//        args.putString(ARG_PARAM1, param1);
+//        args.putString(ARG_PARAM2, param2);
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+//        if (getArguments() != null) {
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
+//        }
     }
 
     @Override
@@ -87,6 +86,9 @@ public class WorkFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_work, container, false);
         listView = (ListView) view.findViewById(R.id.fragment_work_lv);
+
+        ListNormalAdapter adapter = new ListNormalAdapter(this.getContext(),contentList);
+        listView.setAdapter(adapter);
 
 //        RelativeView relview = inflater.inflate(R.layout.fragment_work, container, false);
   //      listView = (ListView) view.findViewById(R.id.fragment_work_lv);
@@ -110,16 +112,17 @@ public class WorkFragment extends Fragment {
                         Intent intent2 = new Intent(getActivity(),PatchActivity.class);
                         startActivity(intent2);
                         break;
+//                    case 3:
+//                        Intent intent3 = new Intent(getActivity(),NotificationActivity.class);
+//
+//                        startActivity(intent3);
+//                        break;
                     case 3:
-                        Intent intent3 = new Intent(getActivity(),NotificationActivity.class);
-
-                        startActivity(intent3);
-                        break;
-                    case 4:
                         Intent intent4 = new Intent(getActivity(),WorkcheckboxActivity.class);
 
                         startActivity(intent4);
                         break;
+                    default:
                 }
             }
         });
