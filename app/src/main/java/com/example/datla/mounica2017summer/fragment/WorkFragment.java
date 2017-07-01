@@ -16,6 +16,7 @@ import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
+import com.example.datla.mounica2017summer.activity.WorkcheckboxActivity;
 import com.example.datla.mounica2017summer.viewPagerActivity;
 
 import java.util.ArrayList;
@@ -48,6 +49,8 @@ public class WorkFragment extends Fragment {
         contentList.add("the fragment is used for");
         contentList.add("three buttons");
         contentList.add("Submit");
+        contentList.add("work checkbox");
+
 
     }
 
@@ -111,6 +114,11 @@ public class WorkFragment extends Fragment {
                         Intent intent3 = new Intent(getActivity(),NotificationActivity.class);
 
                         startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4 = new Intent(getActivity(),WorkcheckboxActivity.class);
+
+                        startActivity(intent4);
                         break;
                 }
             }
