@@ -16,7 +16,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:layout_below="@+id/dialog_custom_tv"
+        android:layout_below="@+id/dialog_work_custom_tv"
         android:scaleType="centerCrop"
         android:src="@mipmap/panda"/>
     <Button
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignBottom="@+id/dialog_custom_tv"
+        android:layout_alignBottom="@+id/dialog_work_custom_tv"
         android:text="OK"/>
 
 </LinearLayout>
