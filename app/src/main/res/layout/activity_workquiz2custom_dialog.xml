@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@android:color/darker_gray"
+    tools:context="com.example.datla.mounica2017summer.activity.Workquiz2customDialog">
+    <RadioGroup
+        android:id="@+id/activity_quiz2_custom_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <RadioButton
+            android:id="@+id/activity_work_quiz2_custom_yes_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Yes"/>
+        <RadioButton
+            android:id="@+id/activity_work_quiz2_custom_no_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="No"/>
+        <RadioButton
+            android:id="@+id/activity_work_quiz2_custom_exit_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Exit"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button android:text="Cancel" android:id="@+id/activity_quiz2_custom_cancel_button" android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Button>
+        <Button android:text="OK" android:id="@+id/activity_quiz2_custom_ok_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
