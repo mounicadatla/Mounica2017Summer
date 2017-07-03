@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.datla.mounica2017summer">
 
+    <provider
+        android:name=".content.Provider"
+        android:authorities="edu.gsu.httpcs.datla.mounica2017summer"
+        android:exported="true" />
+
     <application
         android:name=".MounicaApplication"
         android:allowBackup="true"
@@ -57,7 +62,8 @@
         <activity android:name=".activity.SharedPreferenceActivity" />
         <activity android:name=".activity.WorkcheckboxActivity" />
         <activity android:name=".activity.WorkRadioActivity" />
-        <activity android:name=".activity.WorkcustomdialogActivity"></activity>
+        <activity android:name=".activity.WorkcustomdialogActivity" />
+        <activity android:name=".activity.ServiceActivity"></activity>
     </application>
 
 </manifest>

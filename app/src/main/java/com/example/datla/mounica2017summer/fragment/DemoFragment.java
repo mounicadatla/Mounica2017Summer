@@ -60,6 +60,9 @@ public class DemoFragment extends Fragment {
         contentList.add("Animator");
         contentList.add("Gesture");
         contentList.add("Shared");
+        contentList.add("");
+        contentList.add("Shared");
+        contentList.add("Shared");
 
     }
 
