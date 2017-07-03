@@ -32,7 +32,6 @@ public class WorkRadioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work_radio);
-        setContentView(R.layout.activity_radio_group);
         ButterKnife.bind(this);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 

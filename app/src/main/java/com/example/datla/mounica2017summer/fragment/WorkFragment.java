@@ -17,6 +17,7 @@ import com.example.datla.mounica2017summer.activity.PatchActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.activity.WorkRadioActivity;
 import com.example.datla.mounica2017summer.activity.WorkcheckboxActivity;
+import com.example.datla.mounica2017summer.activity.WorkcustomdialogActivity;
 import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
 import com.example.datla.mounica2017summer.viewPagerActivity;
 
@@ -47,6 +48,7 @@ public class WorkFragment extends Fragment {
         contentList.add("Submit");
         contentList.add("work checkbox");
         contentList.add("radio checkbox");
+        contentList.add("Custom activity");
 
 
     }
@@ -121,9 +123,13 @@ public class WorkFragment extends Fragment {
                         break;
                     case 4:
                         Intent intent4 = new Intent(getActivity(), WorkRadioActivity.class);
-
                         startActivity(intent4);
                         break;
+                    case 5:
+                        Intent intent5 = new Intent(getActivity(), WorkcustomdialogActivity.class);
+                        startActivity(intent5);
+                        break;
+
                     default:
                 }
 
