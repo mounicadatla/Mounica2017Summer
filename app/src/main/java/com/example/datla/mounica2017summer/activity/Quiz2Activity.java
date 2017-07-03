@@ -71,6 +71,7 @@ public class Quiz2Activity extends BaseActivity {
 
         setContentView(R.layout.activity_quiz2);
        //     setContentView(R.layout.work_quiz2_dialog_custom);
+              ButterKnife.bind(this);
 
 //            Workquiz2customDialog workquiz2customDialog = new Workquiz2customDialog(this, new Workquiz2customDialog.ICustomDialogListener() {
 //                @Override
@@ -81,7 +82,6 @@ public class Quiz2Activity extends BaseActivity {
 //            workquiz2customDialog.setCanceledOnTouchOutside(false);
 //            workquiz2customDialog.show();
 //
-            ButterKnife.bind(this);
 
             radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
