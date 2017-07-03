@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.datla.mounica2017summer.activity.Quiz2Activity">
+    <RadioGroup
+        android:id="@+id/activity_quiz2_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
 
-</android.support.constraint.ConstraintLayout>
+        <RadioButton
+            android:id="@+id/activity_work_quiz2_yes_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Yes"/>
+        <RadioButton
+            android:id="@+id/activity_work_quiz2_no_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="No"/>
+        <RadioButton
+            android:id="@+id/activity_work_quiz2_exit_bt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Exit"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button android:text="Cancel" android:id="@+id/activity_quiz2_cancel_button" android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Button>
+        <Button android:text="OK" android:id="@+id/activity_quiz2_ok_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+
+    </LinearLayout>

@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
+import com.example.datla.mounica2017summer.activity.Quiz2Activity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
 import com.example.datla.mounica2017summer.activity.WorkRadioActivity;
 import com.example.datla.mounica2017summer.activity.WorkcheckboxActivity;
@@ -130,6 +131,11 @@ public class WorkFragment extends Fragment {
                         Intent intent5 = new Intent(getActivity(), WorkcustomdialogActivity.class);
                         startActivity(intent5);
                         break;
+                    case 6:
+                        Intent intent6 = new Intent(getActivity(), Quiz2Activity.class);
+                        startActivity(intent6);
+                        break;
+
 
                     default:
                 }
