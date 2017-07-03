@@ -13,20 +13,16 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.example.datla.mounica2017summer.R;
-import com.example.datla.mounica2017summer.activity.NotificationActivity;
 import com.example.datla.mounica2017summer.activity.PatchActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
+import com.example.datla.mounica2017summer.activity.WorkRadioActivity;
 import com.example.datla.mounica2017summer.activity.WorkcheckboxActivity;
 import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
 import com.example.datla.mounica2017summer.viewPagerActivity;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link WorkFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class WorkFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,6 +46,7 @@ public class WorkFragment extends Fragment {
         contentList.add("three buttons");
         contentList.add("Submit");
         contentList.add("work checkbox");
+        contentList.add("radio checkbox");
 
 
     }
@@ -118,12 +115,18 @@ public class WorkFragment extends Fragment {
 //                        startActivity(intent3);
 //                        break;
                     case 3:
-                        Intent intent4 = new Intent(getActivity(),WorkcheckboxActivity.class);
+                        Intent intent3 = new Intent(getActivity(),WorkcheckboxActivity.class);
+
+                        startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4 = new Intent(getActivity(), WorkRadioActivity.class);
 
                         startActivity(intent4);
                         break;
                     default:
                 }
+
             }
         });
 
