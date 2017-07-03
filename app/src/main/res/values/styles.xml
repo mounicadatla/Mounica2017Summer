@@ -16,4 +16,12 @@
         <item name="android:windowNoTitle">false</item>
     </style>
 
+    <style name="workdialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowDisablePreview">@null</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
 </resources>

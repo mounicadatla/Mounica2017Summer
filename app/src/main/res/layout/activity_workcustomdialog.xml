@@ -32,7 +32,7 @@
             android:gravity="left|center_vertical"
             android:text="SingleChoiceDialog"/>
         <RadioButton
-            android:id="@+id/activity_dialog_rb4"
+            android:id="@+id/activity_work_dialog_rb4"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"

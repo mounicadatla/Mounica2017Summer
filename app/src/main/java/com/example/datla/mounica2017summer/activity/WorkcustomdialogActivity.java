@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 
 import com.example.datla.mounica2017summer.BaseActivity;
 import com.example.datla.mounica2017summer.R;
-import com.example.datla.mounica2017summer.dialog.CustomDialog;
+import com.example.datla.mounica2017summer.dialog.WorkCustomDialog;
 
 import java.util.ArrayList;
 
@@ -46,36 +46,36 @@ public class WorkcustomdialogActivity extends BaseActivity {
     public void okClick(){
         switch (checkedID){
 
-            case R.id.activity_dialog_rb1 :
+            case R.id.activity_work_dialog_rb1 :
                 normalDialog();
                 break;
-            case R.id.activity_dialog_rb2 :
+            case R.id.activity_work_dialog_rb2 :
                 listDialog();
                 break;
-            case R.id.activity_dialog_rb3:
+            case R.id.activity_work_dialog_rb3:
                 singleChoiceDialog();
                 break;
-            case R.id.activity_dialog_rb4 :
+            case R.id.activity_work_dialog_rb4 :
                 multiChoiceDialog();
                 break;
-            case R.id.activity_dialog_rb5 :
+            case R.id.activity_work_dialog_rb5 :
                 waitingDialog();
                 break;
-            case R.id.activity_dialog_rb6 :
+            case R.id.activity_work_dialog_rb6 :
                 progressDialog();
                 break;
-            case R.id.activity_dialog_rb7 :
+            case R.id.activity_work_dialog_rb7 :
                 inputDialog();
                 break;
-            case R.id.activity_dialog_rb8 :
-                CustomDialog customDialog = new CustomDialog(this, new CustomDialog.ICustomDialogListener() {
+            case R.id.activity_work_dialog_rb8 :
+                WorkCustomDialog workcustomDialog = new WorkCustomDialog(this, new WorkCustomDialog.ICustomDialogListener() {
                     @Override
                     public void onOKClicked(String msg) {
                         shortToast(msg);
                     }
                 });
-                customDialog.setCanceledOnTouchOutside(false);
-                customDialog.show();
+                workcustomDialog.setCanceledOnTouchOutside(false);
+                workcustomDialog.show();
                 break;
             default:
 
