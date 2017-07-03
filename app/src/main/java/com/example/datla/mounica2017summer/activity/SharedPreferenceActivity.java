@@ -1,7 +1,6 @@
 package com.example.datla.mounica2017summer.activity;
 
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -29,7 +28,7 @@ public class SharedPreferenceActivity extends BaseActivity {
     public void clear(View v){
         SharedPreferences sp = getSharedPreferences(USER, MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
-//        editor.clear();
+        editor.clear();
 //        editor.remove(EMAIL);
 //        editor.remove(PASSWORD);
         editor.commit();
