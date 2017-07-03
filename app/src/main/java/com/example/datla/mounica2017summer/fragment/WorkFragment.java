@@ -49,6 +49,7 @@ public class WorkFragment extends Fragment {
         contentList.add("work checkbox");
         contentList.add("radio checkbox");
         contentList.add("Custom activity");
+        contentList.add("Quiz2 activity");
 
 
     }
