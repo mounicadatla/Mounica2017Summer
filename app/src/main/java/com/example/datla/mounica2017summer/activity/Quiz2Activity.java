@@ -1,5 +1,7 @@
 package com.example.datla.mounica2017summer.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -42,10 +44,10 @@ public class Quiz2Activity extends BaseActivity {
         switch (checkedID){
 
             case R.id.activity_work_quiz2_yes_bt :
-//                normalDialog();
+                yesDialog();
                 break;
             case R.id.activity_work_quiz2_no_bt :
-  //              listDialog();
+                noDialog();
                 break;
             case R.id.activity_work_quiz2_exit_bt :
                 WorkCustomDialog workcustomDialog = new WorkCustomDialog(this, new WorkCustomDialog.ICustomDialogListener() {
@@ -61,10 +63,15 @@ public class Quiz2Activity extends BaseActivity {
 
     }}
 
+
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_quiz2);
+       //     setContentView(R.layout.work_quiz2_dialog_custom);
+
             ButterKnife.bind(this);
             radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
@@ -76,4 +83,21 @@ public class Quiz2Activity extends BaseActivity {
             });
 
     }
+
+    private void yesDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(R.mipmap.ic_launcher);
+//        builder.setTitle("AlertTitle");
+        builder.setMessage("Yes");
+        builder.show();
+    }
+
+    private void noDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(R.mipmap.ic_launcher);
+//        builder.setTitle("AlertTitle");
+        builder.setMessage("No");
+        builder.show();
+    }
+
 }
