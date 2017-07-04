@@ -46,7 +46,7 @@ public class ResultActivity extends AppCompatActivity {
 
             switch (requestCode){
                case ACTIVITY1:
-//                   shortToast(s+"FromResultActivity1");
+           //       shortToast(s+"FromResultActivity1");
                    Toast.makeText(this, s+"FromResultActivity1", Toast.LENGTH_SHORT).show();
 
                       break;
