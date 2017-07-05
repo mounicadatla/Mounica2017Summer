@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/activity_quiz2_xml"
     tools:context="com.example.datla.mounica2017summer.activity.Quiz2Activity">
     <RadioGroup
         android:id="@+id/activity_quiz2_radio_group"

@@ -65,7 +65,7 @@
         <activity android:name=".activity.WorkcustomdialogActivity" />
         <activity android:name=".activity.ServiceActivity" />
         <activity android:name=".activity.Quiz2Activity" />
-        <activity android:name=".activity.Workquiz2customDialog"></activity>
+        <activity android:name=".activity.Quiz4Activity"></activity>
     </application>
 
 </manifest>

@@ -26,7 +26,7 @@
 
             <Button
                 android:id="@+id/work_quiz1_button"
-                android:layout_width="125dp"
+                android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="41dp"
                 android:text="Quiz1">
@@ -35,7 +35,7 @@
 
             <Button
                 android:id="@+id/work_quiz2_button"
-                android:layout_width="125dp"
+                android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="41dp"
                 android:text="Quiz2">
@@ -44,10 +44,18 @@
 
             <Button
                 android:id="@+id/work_quiz3_button"
-                android:layout_width="125dp"
+                android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="41dp"
                 android:text="Quiz3">
+
+            </Button>
+            <Button
+                android:id="@+id/work_quiz4_button"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:text="Quiz4">
 
             </Button>
 

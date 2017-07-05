@@ -1,41 +1,28 @@
 package com.example.datla.mounica2017summer.fragment;
 
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-import android.view.View.OnClickListener;
+
+import com.example.datla.mounica2017summer.AnimatorActivity;
+import com.example.datla.mounica2017summer.activity.DialogActivity;
+import com.example.datla.mounica2017summer.activity.Quiz4Activity;
+import com.example.datla.mounica2017summer.activity.WorkQuiz2Activity;
 
 import com.example.datla.mounica2017summer.R;
-import com.example.datla.mounica2017summer.activity.DialogActivity;
-import com.example.datla.mounica2017summer.activity.PatchActivity;
-import com.example.datla.mounica2017summer.activity.Quiz2Activity;
-import com.example.datla.mounica2017summer.activity.ResultActivity2;
-import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
-import com.example.datla.mounica2017summer.activity.WorkRadioActivity;
-import com.example.datla.mounica2017summer.activity.WorkcheckboxActivity;
 import com.example.datla.mounica2017summer.activity.WorkcustomdialogActivity;
-import com.example.datla.mounica2017summer.activity.Workquiz2customDialog;
-import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
-import com.example.datla.mounica2017summer.viewPagerActivity;
+import com.example.datla.mounica2017summer.dialog.CustomDialog;
+
 
 import java.util.ArrayList;
-
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 public class WorkFragment extends Fragment implements View.OnClickListener{
@@ -103,14 +90,31 @@ public class WorkFragment extends Fragment implements View.OnClickListener{
             case R.id.work_quiz1_button:
                 Log.d("Summer", "Quiz1====");
                 System.out.println("----------------------Quiz1-----------------");
+                Intent intent14= new Intent(getActivity(), AnimatorActivity.class);
+                startActivity (intent14);
+
                 break;
             case R.id.work_quiz2_button:
                 Log.d("Summer", "Quiz2====");
                 System.out.println("----------------------Quiz2-----------------");
-            break;
+//                WorkQuiz2Activity();
+               Intent intent10= new Intent(getActivity(), WorkQuiz2Activity.class);
+//                Intent intent10= new Intent(getActivity(), WorkcustomdialogActivity.class);
+
+                startActivity (intent10);
+
+                break;
             case R.id.work_quiz3_button:
                 Log.d("Summer", "Quiz3====");
                 System.out.println("----------------------Quiz3-----------------");
+             break;
+            case R.id.work_quiz4_button:
+                Log.d("Summer", "Quiz3====");
+                System.out.println("----------------------Quiz3-----------------");
+                Intent intent4= new Intent(getActivity(), Quiz4Activity.class);
+
+                startActivity (intent4);
+
 
                 break;
             default:
@@ -135,6 +139,8 @@ public class WorkFragment extends Fragment implements View.OnClickListener{
         Button  b3 = (Button) view.findViewById(R.id.work_quiz3_button);
         b3.setOnClickListener(this);
 
+        Button  b4 = (Button) view.findViewById(R.id.work_quiz4_button);
+        b4.setOnClickListener(this);
         return view;
     }
 

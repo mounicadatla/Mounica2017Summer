@@ -27,6 +27,7 @@ public class BaseViewPagerAdapter extends FragmentPagerAdapter {
         this.list =list;
     }
 
+
     @Override
     public Fragment getItem(int position) {
         return list.get(position);
