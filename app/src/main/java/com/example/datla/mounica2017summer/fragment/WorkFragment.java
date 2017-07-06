@@ -112,7 +112,6 @@ public class WorkFragment extends Fragment implements View.OnClickListener{
                 Log.d("Summer", "Quiz3====");
                 System.out.println("----------------------Quiz3-----------------");
                 Intent intent4= new Intent(getActivity(), Quiz4Activity.class);
-
                 startActivity (intent4);
 
 

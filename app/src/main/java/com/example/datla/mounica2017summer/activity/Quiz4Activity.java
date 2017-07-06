@@ -1,5 +1,6 @@
 package com.example.datla.mounica2017summer.activity;
 
+import android.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -17,6 +19,10 @@ import com.example.datla.mounica2017summer.fragment.BlueFragment;
 import com.example.datla.mounica2017summer.fragment.GreenFragment;
 import com.example.datla.mounica2017summer.fragment.RedFragment;
 import com.example.datla.mounica2017summer.viewPagerActivity;
+import com.example.datla.mounica2017summer.fragment.BlueFragment;
+import com.example.datla.mounica2017summer.fragment.GreenFragment;
+import com.example.datla.mounica2017summer.fragment.RedFragment;
+
 
 import java.util.ArrayList;
 
@@ -28,12 +34,14 @@ public class Quiz4Activity extends BaseActivity  {
     @BindView(R.id.activity_quiz4_advance)
     ListView lv;
     private ViewPager viewPager;
-    private ArrayList<Fragment> list1 = new ArrayList<Fragment>();
+    private ArrayList<Fragment> fragmentlist = new ArrayList<Fragment>();
 
+//    private RedFragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_quiz4);
         ButterKnife.bind(this);
         ArrayList<String> list = new ArrayList<>();
@@ -65,10 +73,25 @@ public class Quiz4Activity extends BaseActivity  {
 
   //      lv.addHeaderView(headerView);
 
-        TextView tv = new TextView(this);
-        tv.setText("HeaderView");
-        tv.setTextSize(50);
-        lv.addHeaderView(tv);
+//Following fragment is working
+
+        viewPager = (ViewPager) findViewById(R.id.activity_quiz4_view_pager);
+
+        fragmentlist.add(new RedFragment());
+        fragmentlist.add(new GreenFragment());
+        fragmentlist.add(new BlueFragment());
+
+        BaseViewPagerAdapter pagerAdapter =
+                new BaseViewPagerAdapter(getSupportFragmentManager(),fragmentlist);
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(0);
+
+  //      lv.addHeaderView(viewPager);
+
+//        TextView tv = new TextView(this);
+//        tv.setText("HeaderView");
+//        tv.setTextSize(50);
+//        lv.addHeaderView(tv);
 
 //        lv.addHeaderView(vp);
 //        viewPager = (ViewPager) findViewById(R.id.activity_view_pager);
@@ -89,7 +112,7 @@ public class Quiz4Activity extends BaseActivity  {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                showToast(String.valueOf(position));
+               showToast(String.valueOf(position));
             }
         });
     }
