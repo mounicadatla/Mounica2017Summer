@@ -63,9 +63,15 @@
         <activity android:name=".activity.WorkcheckboxActivity" />
         <activity android:name=".activity.WorkRadioActivity" />
         <activity android:name=".activity.WorkcustomdialogActivity" />
+        <activity android:name=".activity.WorkQuiz2Activity" />
         <activity android:name=".activity.ServiceActivity" />
         <activity android:name=".activity.Quiz2Activity" />
-        <activity android:name=".activity.Quiz4Activity"></activity>
+        <activity android:name=".activity.Quiz4Activity" />
+
+        <service
+            android:name=".activity.TestService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

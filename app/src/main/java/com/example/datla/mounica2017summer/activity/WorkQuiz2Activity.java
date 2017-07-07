@@ -31,7 +31,8 @@ import static butterknife.ButterKnife.bind;
 public class WorkQuiz2Activity extends Dialog implements View.OnClickListener{
 
 private WorkQuiz2Activity.ICustomDialogListener listener;
-
+    Button okButton, cancelButton;
+    Activity mActivity;
 
     private int rdgID;
 
@@ -98,9 +99,6 @@ private WorkQuiz2Activity.ICustomDialogListener listener;
 
     @BindView(R.id.activity_quiz2_radio_group) RadioGroup radioGroup;
 
-    public WorkQuiz2Activity(@NonNull Context context) {
-        super(context);
-    }
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -121,6 +119,17 @@ private WorkQuiz2Activity.ICustomDialogListener listener;
 
         return view;
     }
+
+    public WorkQuiz2Activity(Activity activity) {
+        super(activity);
+        mActivity = activity;
+        setContentView(R.layout.activity_quiz2);
+        okButton = (Button) findViewById(R.id.activity_quiz2_ok_button);
+        okButton.setOnClickListener(this);
+        cancelButton = (Button) findViewById(R.id.activity_quiz2_cancel_button);
+        cancelButton.setOnClickListener(this);
+    }
+
 
     public WorkQuiz2Activity( Context context, WorkQuiz2Activity.ICustomDialogListener listener) {
 //        super(context);

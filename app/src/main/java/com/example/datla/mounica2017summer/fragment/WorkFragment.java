@@ -1,6 +1,7 @@
 package com.example.datla.mounica2017summer.fragment;
 
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.datla.mounica2017summer.AnimatorActivity;
 import com.example.datla.mounica2017summer.activity.DialogActivity;
@@ -109,8 +113,8 @@ public class WorkFragment extends Fragment implements View.OnClickListener{
                 System.out.println("----------------------Quiz3-----------------");
              break;
             case R.id.work_quiz4_button:
-                Log.d("Summer", "Quiz3====");
-                System.out.println("----------------------Quiz3-----------------");
+                Log.d("Summer", "Quiz4====");
+                System.out.println("----------------------Quiz4-----------------");
                 Intent intent4= new Intent(getActivity(), Quiz4Activity.class);
                 startActivity (intent4);
 
@@ -136,10 +140,57 @@ public class WorkFragment extends Fragment implements View.OnClickListener{
 
 
         Button  b3 = (Button) view.findViewById(R.id.work_quiz3_button);
-        b3.setOnClickListener(this);
+  //      b3.setOnClickListener(this);
+b3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.custom_dialog_quiz3);
+                dialog.setTitle("Quiz");
+
+                dialog.show();
+
+                Button button_cancel = (Button) dialog.findViewById(R.id.button_cancel);
+                button_cancel.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        dialog.dismiss();
+                    }
+                });
+
+                final RadioButton rbutton_yes = (RadioButton)dialog.findViewById(R.id.button_yes);
+                final RadioButton rbutton_no = (RadioButton)dialog.findViewById(R.id.button_no);
+                final RadioButton rbutton_exit = (RadioButton)dialog.findViewById(R.id.button_exit);
+
+                final RadioGroup radioGroup = (RadioGroup)dialog.findViewById(R.id.rgroup);
+
+                Button button_ok = (Button)dialog.findViewById(R.id.button_ok);
+                button_ok.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        if (radioGroup.getCheckedRadioButtonId()==-1){
+
+                        }else{
+                            if (rbutton_yes.isChecked()) {
+                                Toast.makeText(getActivity(),"Yes",Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            } else if (rbutton_no.isChecked()){
+                                Toast.makeText(getActivity(),"No",Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            } else if (rbutton_exit.isChecked()) {
+                                Toast.makeText(getActivity(),"Exit",Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                                getActivity().finish();
+                            }
+                        }
+                    }
+                });
+            }
+        });
 
         Button  b4 = (Button) view.findViewById(R.id.work_quiz4_button);
         b4.setOnClickListener(this);
+
         return view;
     }
 

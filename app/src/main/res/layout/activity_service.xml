@@ -5,24 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.datla.mounica2017summer.activity.ServiceActivity">
-
     <TextView
         android:id="@+id/activity_service_tv"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="Waiting"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
         android:textSize="30sp"
+        android:gravity="center"
+        android:layout_alignParentTop="true" />
 
-        />
- <Button
-     android:id="@+id/activity_service_start"
-     android:layout_width="match_parent"
-     android:layout_height="60sp"
-     android:layout_centerInParent="true"
-     android:gravity="center"
-     android:textSize="30sp"
-     android:text="Start service" />
+    <Button
+        android:id="@+id/activity_service_start"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:text="Start Service"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/activity_service_stop"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:text="Stop Service"
+        android:layout_below="@+id/activity_service_start"
+        android:gravity="center"
+        android:textSize="30sp"/>
 
 </RelativeLayout>

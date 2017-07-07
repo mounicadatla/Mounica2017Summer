@@ -27,6 +27,7 @@ import com.example.datla.mounica2017summer.activity.RadioGroupActivity;
 import com.example.datla.mounica2017summer.activity.ResultActivity;
 import com.example.datla.mounica2017summer.activity.RunnableHandlerActivity;
 import com.example.datla.mounica2017summer.activity.ScaleTypeActivity;
+import com.example.datla.mounica2017summer.activity.ServiceActivity;
 import com.example.datla.mounica2017summer.activity.SharedPreferenceActivity;
 import com.example.datla.mounica2017summer.adapter.ListNormalAdapter;
 import com.example.datla.mounica2017summer.audio.BaseBean;
@@ -59,10 +60,8 @@ public class DemoFragment extends Fragment {
         contentList.add("Animation");
         contentList.add("Animator");
         contentList.add("Gesture");
-        contentList.add("Shared");
-        contentList.add("");
-        contentList.add("Shared");
-        contentList.add("Shared");
+        contentList.add("SharedPreference");
+        contentList.add("Service&Broadcast");
 
     }
 
@@ -164,7 +163,12 @@ public class DemoFragment extends Fragment {
                         Intent intent16= new Intent(getActivity(), SharedPreferenceActivity.class);
                         startActivity (intent16);
                         break;
+                    case 17:
+                        Intent intent17 = new Intent(getActivity(), ServiceActivity.class);
+//                        Intent intent17 = new Intent(getActivity(), GestureActivity.class);
 
+                        startActivity(intent17);
+                        break;
                         default:
                 }
             }
