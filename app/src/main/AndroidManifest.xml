@@ -71,7 +71,9 @@
         <service
             android:name=".activity.TestService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".activity.Quiz5Activity"></activity>
     </application>
 
 </manifest>

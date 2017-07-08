@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.example.datla.mounica2017summer.AnimatorActivity;
 import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.Quiz4Activity;
+import com.example.datla.mounica2017summer.activity.Quiz5Activity;
 import com.example.datla.mounica2017summer.activity.WorkQuiz2Activity;
 
 import java.util.ArrayList;
@@ -134,7 +135,7 @@ public class WorkFragment extends DialogFragment
             case R.id.work_quiz5_button:
                 Log.d("Summer", "Quiz5====");
                 System.out.println("----------------------Quiz5-----------------");
-                Intent intent5= new Intent(getActivity(), Quiz4Activity.class);
+                Intent intent5= new Intent(getActivity(), Quiz5Activity.class);
                 startActivity (intent5);
 
 
