@@ -5,7 +5,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,19 +19,15 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.datla.mounica2017summer.AnimatorActivity;
-import com.example.datla.mounica2017summer.activity.DialogActivity;
+import com.example.datla.mounica2017summer.R;
 import com.example.datla.mounica2017summer.activity.Quiz4Activity;
 import com.example.datla.mounica2017summer.activity.WorkQuiz2Activity;
-
-import com.example.datla.mounica2017summer.R;
-import com.example.datla.mounica2017summer.activity.WorkcustomdialogActivity;
-import com.example.datla.mounica2017summer.dialog.CustomDialog;
-
 
 import java.util.ArrayList;
 
 
-public class WorkFragment extends Fragment implements View.OnClickListener{
+public class WorkFragment extends DialogFragment
+        implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
 
             // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -111,6 +109,19 @@ public class WorkFragment extends Fragment implements View.OnClickListener{
             case R.id.work_quiz3_button:
                 Log.d("Summer", "Quiz3====");
                 System.out.println("----------------------Quiz3-----------------");
+
+                FragmentManager manager = getFragmentManager();
+                Fragment frag = manager.findFragmentByTag("fragment_edit_name");
+
+//                CustomDialog customDialog = new CustomDialog(this,
+//                        new CustomDialog.ICustomDialogListener() {
+//                    @Override
+//                    public void onOKClicked(String msg) {
+////                        shortToast(msg);
+//                    }
+//                });
+//                customDialog.setCanceledOnTouchOutside(false);
+  //              customDialog.show();
              break;
             case R.id.work_quiz4_button:
                 Log.d("Summer", "Quiz4====");
@@ -120,6 +131,15 @@ public class WorkFragment extends Fragment implements View.OnClickListener{
 
 
                 break;
+            case R.id.work_quiz5_button:
+                Log.d("Summer", "Quiz5====");
+                System.out.println("----------------------Quiz5-----------------");
+                Intent intent5= new Intent(getActivity(), Quiz4Activity.class);
+                startActivity (intent5);
+
+
+                break;
+
             default:
         }
     }
@@ -190,6 +210,10 @@ b3.setOnClickListener(new View.OnClickListener(){
 
         Button  b4 = (Button) view.findViewById(R.id.work_quiz4_button);
         b4.setOnClickListener(this);
+
+        Button  b5 = (Button) view.findViewById(R.id.work_quiz5_button);
+        b5.setOnClickListener(this);
+
 
         return view;
     }

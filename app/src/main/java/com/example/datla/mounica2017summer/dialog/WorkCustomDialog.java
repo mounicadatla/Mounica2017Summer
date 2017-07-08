@@ -8,7 +8,6 @@ import android.view.View;
 import com.example.datla.mounica2017summer.R;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by mounicadatla on 7/2/17.
@@ -25,7 +24,7 @@ public class WorkCustomDialog extends Dialog {
 
 
 
-    @OnClick(R.id.dialog_work_custom_ok)
+    //@OnClick(R.id.dialog_work_custom_ok)
     public void ok(View view){
         listener.onOKClicked("You clicked OK");
         cancel();
