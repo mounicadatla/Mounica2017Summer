@@ -121,22 +121,22 @@ public class AnimatorActivity extends BaseActivity{
         animator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
-                UtilLog.logD("Laura","animation start");
+                UtilLog.logD("mdatlaanim","animation start");
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                UtilLog.logD("Laura","animation end");
+                UtilLog.logD("mdatlaanim","animation end");
             }
 
             @Override
             public void onAnimationCancel(Animator animation) {
-                UtilLog.logD("Laura","animation cancel");
+                UtilLog.logD("mdatlaanim","animation cancel");
             }
 
             @Override
             public void onAnimationRepeat(Animator animation) {
-                UtilLog.logD("Laura","animation repeat");
+                UtilLog.logD("mdatlaanim","animation repeat");
 
             }
         });

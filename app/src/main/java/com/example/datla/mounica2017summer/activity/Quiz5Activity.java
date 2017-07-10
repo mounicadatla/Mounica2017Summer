@@ -1,11 +1,15 @@
 package com.example.datla.mounica2017summer.activity;
 
+import android.animation.Animator;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.BounceInterpolator;
 import android.widget.TextView;
 
 import com.example.datla.mounica2017summer.BaseActivity;
@@ -15,11 +19,14 @@ import com.example.datla.mounica2017summer.fragment.UtilLog;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static android.animation.ValueAnimator.REVERSE;
+
 public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListener{
     private GestureDetector gestureDetector1;
     private int location=0;
     private int sumX=0;
     private int sumY=0;
+    private ValueAnimator repeatAnimator;
 
     @BindView(R.id.activity_quiz5_gesture_tv)
     TextView tv;
@@ -42,6 +49,53 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
         tv.setFocusable(true);
         tv.setClickable(true);
         tv.setLongClickable(true);
+
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shortToast("Click");
+            }
+        });
+
+    }
+
+    private ValueAnimator doAnimatorListener(){
+        ValueAnimator animator = ValueAnimator.ofInt(0,400);
+
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int curValue = (int)animation.getAnimatedValue();
+                tv.layout(tv.getLeft(),curValue,tv.getRight(),curValue+tv.getHeight());
+            }
+        });
+        animator.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation start");
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation end");
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation cancel");
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation repeat");
+
+            }
+        });
+        animator.setRepeatMode(REVERSE);
+        animator.setRepeatCount(2);
+        animator.setInterpolator(new BounceInterpolator());
+        animator.setDuration(1000);
+        return animator;
     }
 
     @Override
@@ -82,7 +136,8 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
             if (sumX<0){
                 if(Math.abs(sumX)>200){
                     shortToast("You scrolled from left to right");
-
+                    tv.setText("Bingo.");
+                    tv.setBackgroundColor(Color.parseColor("#87ceeb"));
                 }
             }
             if (sumX>200){
