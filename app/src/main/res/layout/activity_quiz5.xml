@@ -8,5 +8,15 @@
     tools:context="com.example.datla.mounica2017summer.activity.Quiz5Activity">
 
 
+    <TextView
+        android:id="@+id/activity_quiz5_gesture_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Bingo"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textSize="50sp"
+        />
 
 </LinearLayout>

@@ -29,13 +29,13 @@ public class TestService extends Service {
         return super.onStartCommand(intent, flags, startId);
     }
 
-//    @Override
+////    @Override
 //    public int onStopCommand(Intent intent, int flags, int stopId){
 //        String value = intent.getStringExtra("Service");
 //        if(value.equals("Stop")){
 //            timer.cancel();
 //        }
-//        return super.onStopCommand(intent, flags, stopId);
+////        return super.onStopCommand(intent, flags, stopId);
 //    }
 
     @Nullable
