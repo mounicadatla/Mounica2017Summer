@@ -67,6 +67,7 @@ public class Quiz4Activity extends BaseActivity  {
 //Following fragment is working
 
         viewPager = (ViewPager) findViewById(R.id.activity_quiz4_view_pager);
+  //      viewPager = (ViewPager) findViewById(R.id.activity_quiz4_view_pager1);
 
         fragmentlist.add(new RedFragment());
         fragmentlist.add(new GreenFragment());
@@ -77,7 +78,8 @@ public class Quiz4Activity extends BaseActivity  {
         viewPager.setAdapter(pagerAdapter);
         viewPager.setCurrentItem(0);
 
-        //      lv.addHeaderView(viewPager);
+             lv.addHeaderView(viewPager);
+//        viewPager.setVisibility(viewPager.VISIBILE)
 
 //        TextView tv = new TextView(this);
 //        tv.setText("HeaderView");

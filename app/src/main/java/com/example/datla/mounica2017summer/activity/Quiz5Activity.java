@@ -57,7 +57,8 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                shortToast("Click");
+//                shortToast("Click");
+
             }
         });
 
@@ -75,58 +76,63 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
         animate.setDuration(5000);
         animate.setFillAfter(true);
         view.startAnimation(animate);
+ view.cancelPendingInputEvents();
+        //view.cancel
+//               view.removeAllListeners();
+                     // view.removeAllUpdateListeners();
+
 
     }
-    private ValueAnimator doAnimatorListener(){
-//        ValueAnimator animatorx = ValueAnimator.ofInt(0,400);
-        ValueAnimator animatorx = ValueAnimator.ofInt(0,100);
-//        ValueAnimator animatorx1=  ValueAnimator.ofFloat(tv, "translationY", 0, 200, -200,0,100); //translationY
-
-        animatorx.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int curValue = (int)animation.getAnimatedValue();
-//                tv.layout(tv.getLeft(),curValue,tv.getRight(),curValue+tv.getHeight());
-//                tv.layout(tv.getLeft(),curValue-tv.getHeight(),tv.getRight(),curValue+tv.getHeight());
-                tv.layout(0,tv.getWidth(),0,0);
-
-                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","onAnimationUpdate");
-
-//                TranslateAnimation animate = new TranslateAnimation(0,tv.getWidth(),0,0);
-//                animate.setDuration(5000);
-//                animate.setFillAfter(true);
-//                tv.startAnimation(animate);
-
-            }
-        });
-        animatorx.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation start");
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation end");
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation cancel");
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation repeat");
-
-            }
-        });
-        animatorx.setRepeatMode(REVERSE);
-        animatorx.setRepeatCount(2);
-        animatorx.setInterpolator(new BounceInterpolator());
-        animatorx.setDuration(2000);
-        return animatorx;
-    }
+//    private ValueAnimator doAnimatorListener(){
+////        ValueAnimator animatorx = ValueAnimator.ofInt(0,400);
+//        ValueAnimator animatorx = ValueAnimator.ofInt(0,100);
+////        ValueAnimator animatorx1=  ValueAnimator.ofFloat(tv, "translationY", 0, 200, -200,0,100); //translationY
+//
+//        animatorx.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(ValueAnimator animation) {
+//                int curValue = (int)animation.getAnimatedValue();
+////                tv.layout(tv.getLeft(),curValue,tv.getRight(),curValue+tv.getHeight());
+////                tv.layout(tv.getLeft(),curValue-tv.getHeight(),tv.getRight(),curValue+tv.getHeight());
+//                tv.layout(0,tv.getWidth(),0,0);
+//
+//                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","onAnimationUpdate");
+//
+////                TranslateAnimation animate = new TranslateAnimation(0,tv.getWidth(),0,0);
+////                animate.setDuration(5000);
+////                animate.setFillAfter(true);
+////                tv.startAnimation(animate);
+//
+//            }
+//        });
+//        animatorx.addListener(new Animator.AnimatorListener() {
+//            @Override
+//            public void onAnimationStart(Animator animation) {
+//                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation start");
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animator animation) {
+//                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation end");
+//            }
+//
+//            @Override
+//            public void onAnimationCancel(Animator animation) {
+//                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation cancel");
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animator animation) {
+//                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation repeat");
+//
+//            }
+//        });
+//        animatorx.setRepeatMode(REVERSE);
+//        animatorx.setRepeatCount(2);
+//        animatorx.setInterpolator(new BounceInterpolator());
+//        animatorx.setDuration(2000);
+//        return animatorx;
+//    }
 
     @Override
     public boolean onTouch(View view, MotionEvent event) {
@@ -175,6 +181,9 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
                 com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","right to left");
 
                 slideToLeft(tv);
+                tv.setBackgroundColor(Color.parseColor("#3F51B5"));//Change color to gray color or default color
+                tv.setText("");
+
 //                ObjectAnimator animator = ObjectAnimator.ofFloat(tv,"rotationY",0,180,0);//rotationX   rotationY
   //              animator.setDuration(2000);
     //            animator.setInterpolator(new AccelerateInterpolator());
@@ -184,7 +193,9 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
   //              repeatAnimator.start();
 
 //                tv.setText("");
-                tv.setBackgroundColor(Color.parseColor("#3F51B5"));//Change color to gray color or default color
+//                tv.removeAllListeners();
+ //               tv.removeAllUpdateListeners();
+
 
             }
 
