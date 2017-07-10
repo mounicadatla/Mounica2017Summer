@@ -136,12 +136,16 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
             if (sumX<0){
                 if(Math.abs(sumX)>200){
                     shortToast("You scrolled from left to right");
-                    tv.setText("Bingo.");
+                    tv.setText("Bingo");
                     tv.setBackgroundColor(Color.parseColor("#87ceeb"));
                 }
             }
             if (sumX>200){
                 shortToast("You scrolled from right to left");
+
+                tv.setText("");
+                tv.setBackgroundColor(Color.parseColor("#3F51B5"));
+
             }
 
             if (sumY<0){
