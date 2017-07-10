@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
 import android.view.animation.BounceInterpolator;
 import android.widget.TextView;
 
@@ -32,9 +33,11 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
     TextView tv;
 
     public void trans(){
-        ObjectAnimator animator = ObjectAnimator.ofFloat(tv, "translationY", 0, 200, -200,0,100); //translationY
-        animator.setDuration(2000);
-        animator.start();
+        ObjectAnimator animatorx = ObjectAnimator.ofFloat(tv, "translationY", 0, 200, -200,0,100); //translationY
+        ObjectAnimator animatory = ObjectAnimator.ofFloat(tv, "translationY", 0, 200, -200,0,100); //translationY
+
+        animatorx.setDuration(2000);
+        animatorx.start();
     }
 
 
@@ -60,16 +63,20 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
     }
 
     private ValueAnimator doAnimatorListener(){
-        ValueAnimator animator = ValueAnimator.ofInt(0,400);
+//        ValueAnimator animatorx = ValueAnimator.ofInt(0,400);
+        ValueAnimator animatorx = ValueAnimator.ofInt(0,400);
+//        ValueAnimator animatorx1=  ValueAnimator.ofFloat(tv, "translationY", 0, 200, -200,0,100); //translationY
 
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+        animatorx.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 int curValue = (int)animation.getAnimatedValue();
+//                tv.layout(tv.getLeft(),curValue,tv.getRight(),curValue+tv.getHeight());
                 tv.layout(tv.getLeft(),curValue,tv.getRight(),curValue+tv.getHeight());
+
             }
         });
-        animator.addListener(new Animator.AnimatorListener() {
+        animatorx.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
                 com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","animation start");
@@ -91,11 +98,11 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
 
             }
         });
-        animator.setRepeatMode(REVERSE);
-        animator.setRepeatCount(2);
-        animator.setInterpolator(new BounceInterpolator());
-        animator.setDuration(1000);
-        return animator;
+        animatorx.setRepeatMode(REVERSE);
+        animatorx.setRepeatCount(2);
+        animatorx.setInterpolator(new BounceInterpolator());
+        animatorx.setDuration(2000);
+        return animatorx;
     }
 
     @Override
@@ -142,8 +149,16 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
             }
             if (sumX>200){
                 shortToast("You scrolled from right to left");
+                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","right to left");
 
-                tv.setText("");
+//                ObjectAnimator animator = ObjectAnimator.ofFloat(tv,"rotationY",0,180,0);//rotationX   rotationY
+  //              animator.setDuration(2000);
+    //            animator.setInterpolator(new AccelerateInterpolator());
+                repeatAnimator = doAnimatorListener();
+//        repeatAnimator.setStartDelay(3000);
+                repeatAnimator.start();
+
+//                tv.setText("");
                 tv.setBackgroundColor(Color.parseColor("#3F51B5"));//Change color to gray color or default color
 
             }
