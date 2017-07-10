@@ -72,7 +72,7 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
     }
     // To animate view slide out from right to left
     public void slideToLeft(View view){
-        TranslateAnimation animate = new TranslateAnimation(0,-view.getWidth(),0,0);
+        TranslateAnimation animate = new TranslateAnimation(0,-view.getWidth()/2,0,0);
         animate.setDuration(5000);
         animate.setFillAfter(true);
         view.startAnimation(animate);
@@ -180,9 +180,9 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
                 shortToast("You scrolled from right to left");
                 com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","right to left");
 
-//                slideToLeft(tv);
-                tv.setBackgroundColor(Color.parseColor("#3F51B5"));//Change color to gray color or default color
-                tv.setText("");
+                slideToLeft(tv);
+               tv.setBackgroundColor(Color.parseColor("#87ceeb"));//Change color to gray color or default color
+  //              tv.setText("");
 
 //                ObjectAnimator animator = ObjectAnimator.ofFloat(tv,"rotationY",0,180,0);//rotationX   rotationY
   //              animator.setDuration(2000);
