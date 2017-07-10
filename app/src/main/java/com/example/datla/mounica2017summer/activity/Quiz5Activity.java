@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.BounceInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
 import com.example.datla.mounica2017summer.BaseActivity;
@@ -61,10 +62,24 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
         });
 
     }
+    public void slideToRight(View view){
+        TranslateAnimation animate = new TranslateAnimation(0,view.getWidth(),0,0);
+        animate.setDuration(5000);
+        animate.setFillAfter(true);
+        view.startAnimation(animate);
 
+    }
+    // To animate view slide out from right to left
+    public void slideToLeft(View view){
+        TranslateAnimation animate = new TranslateAnimation(0,-view.getWidth(),0,0);
+        animate.setDuration(5000);
+        animate.setFillAfter(true);
+        view.startAnimation(animate);
+
+    }
     private ValueAnimator doAnimatorListener(){
 //        ValueAnimator animatorx = ValueAnimator.ofInt(0,400);
-        ValueAnimator animatorx = ValueAnimator.ofInt(0,400);
+        ValueAnimator animatorx = ValueAnimator.ofInt(0,100);
 //        ValueAnimator animatorx1=  ValueAnimator.ofFloat(tv, "translationY", 0, 200, -200,0,100); //translationY
 
         animatorx.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -72,7 +87,15 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
             public void onAnimationUpdate(ValueAnimator animation) {
                 int curValue = (int)animation.getAnimatedValue();
 //                tv.layout(tv.getLeft(),curValue,tv.getRight(),curValue+tv.getHeight());
-                tv.layout(tv.getLeft(),curValue,tv.getRight(),curValue+tv.getHeight());
+//                tv.layout(tv.getLeft(),curValue-tv.getHeight(),tv.getRight(),curValue+tv.getHeight());
+                tv.layout(0,tv.getWidth(),0,0);
+
+                com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","onAnimationUpdate");
+
+//                TranslateAnimation animate = new TranslateAnimation(0,tv.getWidth(),0,0);
+//                animate.setDuration(5000);
+//                animate.setFillAfter(true);
+//                tv.startAnimation(animate);
 
             }
         });
@@ -151,12 +174,14 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
                 shortToast("You scrolled from right to left");
                 com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","right to left");
 
+                slideToLeft(tv);
 //                ObjectAnimator animator = ObjectAnimator.ofFloat(tv,"rotationY",0,180,0);//rotationX   rotationY
   //              animator.setDuration(2000);
     //            animator.setInterpolator(new AccelerateInterpolator());
-                repeatAnimator = doAnimatorListener();
 //        repeatAnimator.setStartDelay(3000);
-                repeatAnimator.start();
+
+//                repeatAnimator = doAnimatorListener();
+  //              repeatAnimator.start();
 
 //                tv.setText("");
                 tv.setBackgroundColor(Color.parseColor("#3F51B5"));//Change color to gray color or default color
