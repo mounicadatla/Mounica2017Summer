@@ -144,7 +144,7 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
                 shortToast("You scrolled from right to left");
 
                 tv.setText("");
-                tv.setBackgroundColor(Color.parseColor("#3F51B5"));
+                tv.setBackgroundColor(Color.parseColor("#3F51B5"));//Change color to gray color or default color
 
             }
 
