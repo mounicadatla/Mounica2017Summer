@@ -180,7 +180,7 @@ public class Quiz5Activity  extends BaseActivity implements  View.OnTouchListene
                 shortToast("You scrolled from right to left");
                 com.example.datla.mounica2017summer.util.UtilLog.logD("mdatlaanim","right to left");
 
-                slideToLeft(tv);
+//                slideToLeft(tv);
                 tv.setBackgroundColor(Color.parseColor("#3F51B5"));//Change color to gray color or default color
                 tv.setText("");
 
